@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 
+	"github.com/Dima-Melnik/go-restapi-example-with-gin/internal/utils"
 	"gopkg.in/yaml.v3"
 )
 
@@ -42,7 +43,7 @@ func LoadConfig(path string) error {
 
 func InitDatabaseConn() string {
 	if Cfg.Database.DBPassword == "" {
-		Cfg.Database.DBPassword = os.Getenv("DB_PASSWORD")
+		Cfg.Database.DBPassword = utils.GetEnv("DB_PASSWORD")
 	}
 
 	connStr := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=%s",
