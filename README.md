@@ -5,7 +5,7 @@ A simple example project showing how to build a REST API in **Go** using **Gin**
 ---
 
 ## 📁 Project Structure
-
+```
 go-restapi-example-with-gin/
 ├── config/ # Configuration files 
 │ ├── config.yaml
@@ -21,6 +21,7 @@ go-restapi-example-with-gin/
 ├── go.sum
 ├── .gitignore
 └── README.md
+```
 ---
 
 ## ⚙️ Example `config.yaml`
@@ -39,11 +40,12 @@ database:
 ```
 
 🔐 Example .env
-env
+```env
+DB_PASSWORD="your_password"
+```
 
 # Application
 
-DB_PASSWORD="your_password"
 
 🧩 Technologies Used
 Go 1.25.3
