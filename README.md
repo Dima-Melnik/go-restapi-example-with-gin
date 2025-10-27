@@ -61,11 +61,17 @@ YAML / env
 🚀 Getting Started
 
 # 1. Clone the repository
+```
 git clone https://github.com/Dima-Melnik/go-restapi-example-with-gin.git
 cd go-restapi-example-with-gin
+```
 
 # 3. Install dependencies
+```
 go mod tidy
+```
 
 # 4. Run the application
+```
 go run main.go
+```
