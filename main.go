@@ -1,12 +1,24 @@
 package main
 
 import (
-	"fmt"
+	"log"
 
 	"github.com/Dima-Melnik/go-restapi-example-with-gin/config"
+	db "github.com/Dima-Melnik/go-restapi-example-with-gin/internal/database"
+	"github.com/Dima-Melnik/go-restapi-example-with-gin/internal/routes"
 )
 
 func main() {
 	config.LoadConfig("config/config.yaml")
-	fmt.Printf("Password: %s", config.InitDatabaseConn())
+
+	db.ConnectDB()
+	defer db.CloseDB()
+
+	r := routes.Routes()
+
+	port := config.InitServerPort()
+
+	if err := r.Run(port); err != nil {
+		log.Fatal(err)
+	}
 }
