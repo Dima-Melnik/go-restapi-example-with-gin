@@ -16,6 +16,7 @@ go-restapi-example-with-gin/
 │ ├── database/
 │ ├── utils/
 │ └── model/
+├── .env
 ├── main.go # Entry point
 ├── go.mod
 ├── go.sum
