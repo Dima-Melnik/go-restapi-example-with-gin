@@ -32,12 +32,11 @@ server:
   port: 8080
 
 database:
-  host: localhost
-  port: 5432
-  user: postgres
-  password: secret_password
-  name: example_db
-  sslmode: disable
+  db_host: localhost
+  db_port: 5432
+  db_user: postgres
+  db_name: example_db
+  db_sslmode: disable
 ```
 
 🔐 Example .env
